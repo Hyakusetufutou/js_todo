@@ -1,0 +1,29 @@
+li {
+    margin: 4px;
+    list-style: none;
+}
+
+#todo-form {
+    margin-bottom: 5px;
+}
+
+#todo-input {
+    padding: 3px 5px;
+    margin-right: 3px;
+}
+
+.checkbox {
+    margin-right: 10px;
+}
+
+.edit {
+    margin: 0px 5px 0px 20px;
+}
+
+.edit-save {
+    margin: 0px 5px 0px 10px;
+}
+
+.todo-edit-form {
+    padding: 3px 5px;
+}
