@@ -1,14 +1,36 @@
+.todo-app {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid gray;
+  box-shadow: 0px 13px 15px 4px #777777;
+  border-radius: 10px;
+  background-color: #c7e2fc;
+}
+.todo-app h1,
+.todo-app h2 {
+  text-align: center;
+}
+
 li {
   margin: 4px;
   list-style: none;
 }
 
-#todo-form {
+.todo-list-element {
+  padding: 0;
+}
+
+#todo-form,
+.edit-from-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-bottom: 5px;
 }
 
 #todo-input {
-  padding: 3px 5px;
   margin-right: 3px;
 }
 
@@ -17,13 +39,88 @@ li {
 }
 
 .edit {
+  width: 60px;
+  height: 40px;
   margin: 0px 5px 0px 20px;
+  padding: 5px 10px;
+  font-size: 17px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
+.edit:hover {
+  opacity: 0.7;
+}
+
+.delete {
+  width: 60px;
+  height: 40px;
+  margin: 0px 0px 0px 2px;
+  padding: 5px 10px;
+  font-size: 17px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete:hover {
+  opacity: 0.7;
+}
+
+#todo-save,
 .edit-save {
+  width: 60px;
+  height: 40px;
   margin: 0px 5px 0px 10px;
+  padding: 5px 10px;
+  font-size: 17px;
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.todo-edit-form {
-  padding: 3px 5px;
+#todo-save:hover,
+.edit-save:hover {
+  opacity: 0.7;
+}
+
+.todo-edit-form,
+#todo-input {
+  width: 150px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.todo-list {
+  text-align: center;
+}
+
+.todo-item-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  margin: 8px;
+}
+
+.todo-item-list p {
+  width: 100px;
+  font-size: 20px;
+  text-align: start;
+  margin: 0;
+  overflow-wrap: break-word;
 }

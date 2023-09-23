@@ -3,8 +3,8 @@ import { element } from "./html-util.js";
 export class TodoItemView {
   createTodoItemElement(item, { onUpdateTodo, onDeleteTodo }) {
     const todoItemElement = item.completed
-      ? element`<li><input type="checkbox" id="checkbox-id${item.id}" class="checkbox" checked>${item.title}<button id="edit-id${item.id}" class="edit">編集</button><button id="delete-id${item.id}" class="delete">削除</button></li>`
-      : element`<li><input type="checkbox" id="checkbox-id${item.id}" class="checkbox">${item.title}<button id="edit-id${item.id}" class="edit">編集</button><button id="delete-id${item.id}" class="delete">削除</button></li>`;
+      ? element`<li class="todo-item-list"><input type="checkbox" id="checkbox-id${item.id}" class="checkbox" checked><p>${item.title}</p><button id="edit-id${item.id}" class="edit">編集</button><button id="delete-id${item.id}" class="delete">削除</button></li>`
+      : element`<li class="todo-item-list"><input type="checkbox" id="checkbox-id${item.id}" class="checkbox"><p>${item.title}</p><button id="edit-id${item.id}" class="edit">編集</button><button id="delete-id${item.id}" class="delete">削除</button></li>`;
 
     const inputCheckboxElement = todoItemElement.querySelector(
       `#checkbox-id${item.id}`
@@ -44,7 +44,7 @@ export class TodoItemView {
   }
 
   createTodoItemEditElement(item, { onEditTodo }) {
-    const todoItemElement = element`<li><input type="text" id="edit-form-id${item.id}" class="todo-edit-form" value="${item.title}"><button id="save-id${item.id}" class="edit-save">保存</button></li>`;
+    const todoItemElement = element`<li class="edit-from-list"><input type="text" maxlength="20" id="edit-form-id${item.id}" class="todo-edit-form" value="${item.title}"><button id="save-id${item.id}" class="edit-save">保存</button></li>`;
 
     const saveButtonElement = todoItemElement.querySelector(
       `#save-id${item.id}`
